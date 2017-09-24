@@ -1,0 +1,32 @@
+#Revisar que JBOSS termina de procesar cada comando
+#Consola 1
+tail -f /opt/jboss/standalone/log/server.log
+
+#INSTALAR APLICACION
+#Consola 2
+sudo -u jboss /opt/jboss/bin/jboss-cli.sh --connect --file=/opt/scripts/conf-jboss01.cli;
+sudo -u jboss /opt/jboss/bin/jboss-cli.sh --connect --command=:reload;
+sudo -u jboss /opt/jboss/bin/jboss-cli.sh --connect --file=/opt/scripts/conf-jboss02.cli;
+sudo -u jboss /opt/jboss/bin/jboss-cli.sh --connect --command=:reload;
+sudo -u jboss /opt/jboss/bin/jboss-cli.sh --connect --file=/opt/scripts/conf-jboss03.cli;
+sudo -u jboss /opt/jboss/bin/jboss-cli.sh --connect --command=:reload;
+cd /opt/ejbca;
+sudo -u jboss ant clean deployear;
+sudo service jboss restart;
+sudo -u jboss ant runinstall;
+sudo -u jboss ant deploy-keystore; 
+sudo -u jboss ant clientToolBox;
+mv /opt/ejbca/dist/clientToolBox caToolBox;
+sudo -u jboss /opt/jboss/bin/jboss-cli.sh --connect --file=/opt/scripts/conf-jboss04.cli;
+sudo -u jboss /opt/jboss/bin/jboss-cli.sh --connect --command=:reload;
+sudo -u jboss /opt/jboss/bin/jboss-cli.sh --connect --file=/opt/scripts/conf-jboss05.cli;
+sudo -u jboss /opt/jboss/bin/jboss-cli.sh --connect --command=":shutdown(restart=true)";
+sudo -u jboss /opt/jboss/bin/jboss-cli.sh --connect --file=/opt/scripts/conf-jboss06.cli;
+sudo -u jboss /opt/jboss/bin/jboss-cli.sh --connect --command=:reload;
+sudo -u jboss /opt/jboss/bin/jboss-cli.sh --connect --file=/opt/scripts/conf-jboss07.cli;
+sudo -u jboss /opt/jboss/bin/jboss-cli.sh --connect --command=":shutdown(restart=true)";
+
+##ABRIR NAVEGADOR 
+#copiar certificado de identidad electronica desde /opt/ejbca/p12/superamin.p12
+#importarlo en el navegador de la maquina autorizadas a administrar el sistema
+#http://1.2.3.4:8080/ejbca

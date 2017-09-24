@@ -1,0 +1,19 @@
+#MAKE SURE SERVER IS READY
+batch
+/subsystem=remoting/http-connector=http-remoting-connector:remove
+/subsystem=remoting/http-connector=http-remoting-connector:add(connector-ref="remoting",security-realm="ApplicationRealm")
+/socket-binding-group=standard-sockets/socket-binding=remoting:add(port="4447")
+/subsystem=undertow/server=default-server/http-listener=remoting:add(socket-binding=remoting)
+
+# Logging
+/subsystem=logging/logger=org.ejbca:add
+/subsystem=logging/logger=org.ejbca:write-attribute(name=level, value=DEBUG)
+/subsystem=logging/logger=org.cesecore:add
+/subsystem=logging/logger=org.cesecore:write-attribute(name=level, value=DEBUG)
+
+#remove TLS conf before deploying ejbca
+/subsystem=undertow/server=default-server/http-listener=default:remove
+#/subsystem=undertow/server=default-server/https-listener=https:remove
+/socket-binding-group=standard-sockets/socket-binding=http:remove
+/socket-binding-group=standard-sockets/socket-binding=https:remove
+run-batch
