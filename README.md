@@ -2,7 +2,7 @@ Estas son las instrucciones para instalar una Autoridad Certificadora usando el 
 
 ## Requisitos
 
-OpenJDK 8
+* OpenJDK 8
 * [JBoss EAP 7.0](https://developers.redhat.com/download-manager/file/jboss-eap-7.0.0.zip) 
 * [EJBCA CE 6.5](https://sourceforge.net/projects/ejbca/files/ejbca6/ejbca_6_5_0/ejbca_ce_6_5.0.5.zip)
 
@@ -19,4 +19,4 @@ OpenJDK 8
 
 ## Licencia
 
-Este trabajo esta cubierto dentro de la estrategia de desarrollo de servicios de Gobierno Electrónico del Gobierno de El Salvador y como tal es una obra de valor público sujeto a los lineamientos de la Política de Datos Abiertos y cubierto bajo la licencia [CC-BY-SA] (https://creativecommons.org/licenses/by-sa/3.0/deed.es)  
+Este trabajo esta cubierto dentro de la estrategia de desarrollo de servicios de Gobierno Electrónico del Gobierno de El Salvador y como tal es una obra de valor público sujeto a los lineamientos de la Política de Datos Abiertos y la licencia [CC-BY-SA](https://creativecommons.org/licenses/by-sa/3.0/deed.es).  
