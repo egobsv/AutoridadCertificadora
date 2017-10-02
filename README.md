@@ -13,7 +13,7 @@ Estas son las instrucciones para instalar una Autoridad Certificadora usando el 
  
 - Prepare su servidor ejecutando los comandos de su sistema operativo (debian-jessie.sh o ubuntu-xenial.sh).  
 
-- Ingrese a la carpeta 'configurar-jboss', habra el archivo comandos-jboss.txt. Ejecute estos comandos uno a uno, debe asegurarse de que JBoss los comandos procesa con éxito. Al final asegurese de copiar e instalar el certificado de superadmin en la maquina que desee. 
+- Ingrese a la carpeta 'configurar-jboss', habra el archivo comandos-jboss.txt. Ejecute estos comandos uno a uno, debe asegurarse de que JBoss porcesa cada comando con éxito uno a uno. Al final asegurese de copiar e instalar el certificado de superadmin en la maquina que desee. 
 
 - La interfaz publica estará disponible en http://[ip servidor]:8080/ejbca. 
 
