@@ -19,6 +19,24 @@ Estas son las instrucciones para instalar una Autoridad Certificadora usando el 
 
 - Para las maquinas que tengan instalado el certificado de 'superadmin', la página de administración estará disponible en https://[ip servidor]:8443/ejbca/adminweb/. 
 
+## Perfiles de Certificados
+
+Estos perfiles define las características técnicas de los certificados. Ademas de los perfiles que instala por defecto EJBCA, el archivo perfiles-cert.zip contiene perfiles de certificados que pueden ser usados como referencia.  Para usarlos desde la página de Administración, seleccione 'CA Functions', 'Certificate Profiles', 'Import from Zip file'. Una vez importados los certificados, use la opción 'Certificate Authorities' para crear una CA Raíz y dos subordinadas.
+
+ 	 CA Raíz
+     ------ | --------
+     |               |
+
+SubCA Personas     SubCA Servicios
+
+
+# Perfiles de Entidades
+
+Estos perfiles definen el contenido de certificados a usuarios o entidades finales. El archivo perfiles-enti.zip contiene perfiles de entidades que pueden ser usados como referencia.  Para usarlos desde la página de Administración, seleccione 'RA Functions', 'End Entity Profiles', 'Import from Zip file'. 
+
+Una vez importados puede agregar usuarios desde la opción 'Add End Entity'. Cada usuario
+creado podrá ingresar desde la web publica http://[ip servidor]:8080/ejbca y obtener su certificado. 
+
 ## Licencia
 
 Este trabajo esta cubierto dentro de la estrategia de desarrollo de servicios de Gobierno Electrónico del Gobierno de El Salvador y como tal es una obra de valor público sujeto a los lineamientos de la Política de Datos Abiertos y la licencia [CC-BY-SA](https://creativecommons.org/licenses/by-sa/3.0/deed.es).  
