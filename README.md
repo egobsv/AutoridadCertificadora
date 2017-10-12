@@ -31,7 +31,7 @@ Estos perfiles define las características técnicas de los certificados. Ademas
 SubCA Personas     SubCA Servicios
 ```
 
-# Perfiles de Entidades
+## Perfiles de Entidades
 
 Estos perfiles definen el contenido de certificados a usuarios o entidades finales. El archivo perfiles-enti.zip contiene perfiles de entidades que pueden ser usados como referencia.  Para usarlos desde la página de Administración, seleccione 'RA Functions', 'End Entity Profiles', 'Import from Zip file'. 
 
