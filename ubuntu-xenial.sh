@@ -17,6 +17,7 @@
     groupadd -r jboss;
     useradd -r -g jboss -d /opt/jboss -s /sbin/nologin jboss;
     chown -R jboss:jboss /opt/jboss;
+    chown -R jboss:jboss /opt/ejbca;
     sudo chmod -R 775 /opt/ejbca;
     systemctl start jboss.service;
     systemctl enable jboss.service;
@@ -26,3 +27,4 @@ sudo -u postgres psql -U postgres <<OMG
  CREATE USER ejbca WITH PASSWORD 'ejbca';
  CREATE DATABASE ejbca WITH OWNER ejbca ENCODING 'UTF8' ;
 OMG
+

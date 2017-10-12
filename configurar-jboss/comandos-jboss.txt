@@ -1,9 +1,11 @@
-#Revisar que JBOSS termina de procesar cada comando
+#Revisar que JBOSS termina de procesar cada comando, abrir dos consolas de comandos:
+
 #Consola 1
+#Pare verificar ejecución de comandos
 tail -f /opt/jboss/standalone/log/server.log
 
-#INSTALAR APLICACION
 #Consola 2
+#INSTALAR APLICACION
 sudo -u jboss /opt/jboss/bin/jboss-cli.sh --connect --file=/opt/scripts/conf-jboss01.cli;
 sudo -u jboss /opt/jboss/bin/jboss-cli.sh --connect --command=:reload;
 sudo -u jboss /opt/jboss/bin/jboss-cli.sh --connect --file=/opt/scripts/conf-jboss02.cli;
