@@ -23,7 +23,7 @@ Estas son las instrucciones para instalar una Autoridad Certificadora usando el 
 
 Estos perfiles define las características técnicas de los certificados. Ademas de los perfiles que instala por defecto EJBCA, el archivo perfiles-cert.zip contiene perfiles de certificados que pueden ser usados como referencia.  Para usarlos desde la página de Administración, seleccione 'CA Functions', 'Certificate Profiles', 'Import from Zip file'. Una vez importados los certificados, use la opción 'Certificate Authorities' para crear una CA Raíz y dos subordinadas.
 
- 	```
+ ```
          CA Raíz
      ------ | --------
      |               |
