@@ -9,7 +9,7 @@ Estas son las instrucciones para instalar una Autoridad Certificadora usando el 
 
 ## Instrucciones
 
-- Descargue este repositorio y guárdelo en su servidor dentro de la carpeta /opt. Asegurese de agregar de descargar y agregar el servidor de JBoss en esta misma carpeta (jboss-eap-7.0.0.zip)
+- Descargue este repositorio y guárdelo en su servidor dentro de la carpeta /opt. Asegurese de descargar y agregar el servidor de JBoss en esta misma carpeta (jboss-eap-7.0.0.zip)
  
 - Prepare su servidor ejecutando los comandos de su sistema operativo (debian-jessie.sh o ubuntu-xenial.sh).  
 
