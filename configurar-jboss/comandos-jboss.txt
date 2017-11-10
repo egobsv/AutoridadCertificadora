@@ -30,5 +30,6 @@ sudo -u jboss /opt/jboss/bin/jboss-cli.sh --connect --command=":shutdown(restart
 
 ##ABRIR NAVEGADOR 
 #copiar certificado de identidad electronica desde /opt/ejbca/p12/superamin.p12
-#importarlo en el navegador de la maquina autorizadas a administrar el sistema
+#importarlo en el navegador de la maquina autorizadas a administrar el sistema.
+# La contraseña para importar el certificado por defecto es 'ejbca'.
 #http://1.2.3.4:8080/ejbca
