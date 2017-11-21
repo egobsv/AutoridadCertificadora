@@ -40,7 +40,7 @@ Finalmente revise los perfiles que importados, asegures que usan las CA que acab
 
 Estos perfiles definen el contenido de certificados a usuarios o entidades finales. El archivo perfiles-enti.zip contiene perfiles de entidades que pueden ser usados como referencia.  Para usarlos desde la página de Administración, seleccione 'RA Functions', 'End Entity Profiles', 'Seleccionar Archivo','Import from Zip file'. 
 
-Finalmente revise los perfiles que importados, asegures que usan los Perfiles de Certificados que acaba de importar y haga los ajustes que considere necesarios. Una vez importados puede agregar usuarios desde la opción 'Add End Entity'. Cada entidad es un nuevo usuario que podrá ingresar desde la web publica http://[ip servidor]:8080/ejbca y obtener su certificado. 
+Finalmente revise los perfiles que importados, asegures que usan los Perfiles de Certificados que acaba de importar y haga los ajustes que considere necesarios. Una vez importados puede agregar usuarios desde la opción 'Add End Entity'. Cada entidad es un nuevo usuario que podrá ingresar desde la web pública http://localhost:8080/ejbca y obtener su certificado. 
 
 ## Configuración de Servicio OCSP
 
@@ -61,14 +61,14 @@ Asigne un nombre, márquelo como activo y genere un nuevo par de llaves.
 
 Asígnele un nombre y seleccione el Crypto Token creado en el paso anterior. 
 
-4. Crear Petición CSR: En este paso crearemos una petición de firma (CSR) para utilizar la entidad creada en el paso 1. Desde la lista de OcspKeyBindings seleccione el elemento creado en el paso anterior y desde la columna 'Action' seleccione 'CSR'. Luego desde la página pública de EJBCA (http://[ip servidor]:8080/ejbca) seleccione 'Create Certificate from CSR', use las credenciales de la entidad creada en el paso 1 y suba el archivo CSR.
+4. Crear Petición CSR: En este paso crearemos una petición de firma (CSR) para utilizar la entidad creada en el paso 1. Desde la lista de OcspKeyBindings seleccione el elemento creado en el paso anterior y desde la columna 'Action' seleccione 'CSR'. Luego desde la página pública de EJBCA (http://localhost:8080/ejbca) seleccione 'Create Certificate from CSR', use las credenciales de la entidad creada en el paso 1 y suba el archivo CSR.
 
 5. Activar el servicio OCSP: Desde 'Internal Key Bindings' -> 'OcspKeyBindings'  seleccione el elemento creado en el paso 3 y desde la columna 'Action' seleccione 'Update'. El sistema encuentrará el certificado recién generado usando las llaves que ya tiene nuestro Crypto Token. Finalmente seleccione el botón "Enable" para dejar activo el servicio OCSP.
 
 Para probar el servicio puede usar OpenSSL y los certificados de la autoridad certificadora:
 
 ```
-openssl ocsp -req_text -issuer subCA.pem -CAfile CARaiz.pem -cert entidad.pem  -url http://localhost:9080/ejbca/publicweb/status/ocsp  
+openssl ocsp -req_text -issuer subCA.pem -CAfile CARaiz.pem -cert entidad.pem  -url http://localhost:8080/ejbca/publicweb/status/ocsp  
 ```
 
 ## Servicio de Sellado de Tiempo TSA
