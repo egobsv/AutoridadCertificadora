@@ -8,6 +8,7 @@
     unzip -q /opt/jboss-eap-7.0.0.zip;
     mv /opt/ejbca_ce_6_5.0.5 /opt/ejbca;
     mv /opt/jboss-eap-7.0 /opt/jboss;
+    mv /opt/configurar-jboss /opt/scripts; 
     cp /opt/scripts/ejbca/* /opt/ejbca/conf/;
     cp /opt/scripts/jboss.conf /etc/jboss/;
     cp /opt/scripts/jboss.service /etc/systemd/system/;
