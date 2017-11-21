@@ -2,7 +2,7 @@
     hostname ejbca;
     apt-get update ;
     apt-get -y install  openjdk-8-jre-headless ca-certificates-java;
-    apt-get -y install openjdk-8-jdk ant ant-optional unzip postgresql-9.5 postgresql-client-9.5 unzip;    
+    apt-get -y install openjdk-8-jdk unzip ntp ant ant-optional postgresql-9.5 postgresql-client-9.5;    
     mkdir -p  /etc/jboss; cd /opt/;
     unzip -q /opt/ejbca_ce_6_5.0.5.zip;
     unzip -q /opt/jboss-eap-7.0.0.zip;
