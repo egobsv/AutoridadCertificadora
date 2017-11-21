@@ -48,7 +48,7 @@ El servicio OCSP permite que un usuario o aplicación valide el estado (revocado
 
 Esta instalación utiliza EJBCA como Autoridad Certificadora y Autoridad de Validación OCSP. Es posible configurar EJBCA para que actúe como Autoridad de Validación dedicada y ofrecer únicamente el servicio OCSP. A continuación se describen los pasos para agregar y configurar el servicio OCSP.
 
-1. Certificado OCSP: Cada consulta OCSP recibe una respuesta firmada electrónicamente, por esto necesitamos contar con un certificado para firmar consultas OCSP (Extended key usage = OCSP Signer). Agregaremos una nueva entidad usando el perfil 'validacion-ocsp', vinculada a la CA 'SubCA Servicios'. Este entidad ser usada para generar el certificado que firma respuestas OCSP, antes de generarlo desde la interfaz publica complete los siguientes pasos: 
+1. Certificado OCSP: Cada consulta OCSP recibe una respuesta firmada electrónicamente, por esto necesitamos contar con un certificado para firmar consultas OCSP (Extended key usage = OCSP Signer). Agregaremos una nueva entidad usando el perfil 'validacion-ocsp', vinculada a la CA 'SubCA Servicios'. Este entidad será usada para generar el certificado que firma respuestas OCSP, antes de generarlo desde la interfaz pública complete los siguientes pasos: 
 
 2: Almacén de llaves: Crearemos un almacén (Crypto Token) para guardar las llaves que usara el servicio OCSP. Desde el menú principal seleccione:
 
@@ -56,15 +56,14 @@ Esta instalación utiliza EJBCA como Autoridad Certificadora y Autoridad de Vali
 
 Asigne un nombre, márquelo como activo y genere un nuevo par de llaves.
 
-3. Vinculación de llaves: En este paso asignaremos el almacén y llaves del paso anterior con un nuevo servicio OCSP, elija:  
- 
+3. Vinculación de llaves: En este paso asociaremos el almacén y llaves del paso anterior con un nuevo servicio OCSP, elija:  
 'System Functions' -> 'Internal Key Bindings' -> OcspKeyBindings -> 'Create new'
 
 Asígnele un nombre y seleccione el Crypto Token creado en el paso anterior. 
 
-4. Crear Petición CSR: En este paso crearemos una petición de firma (CSR) para utilizar la entidad creada en el paso 1. Desde la lista de OcspKeyBindings seleccione el elemento creado en el paso anterior y desde la columna 'Action' seleccione 'CSR'. Luego desde la pagina Publica de EJBCA seleccione 'Create Certificate from CSR', use las credenciales de la entidad creada en el paso 1 y suba el archivo CSR.
+4. Crear Petición CSR: En este paso crearemos una petición de firma (CSR) para utilizar la entidad creada en el paso 1. Desde la lista de OcspKeyBindings seleccione el elemento creado en el paso anterior y desde la columna 'Action' seleccione 'CSR'. Luego desde la página pública de EJBCA (http://[ip servidor]:8080/ejbca) seleccione 'Create Certificate from CSR', use las credenciales de la entidad creada en el paso 1 y suba el archivo CSR.
 
-5. Activar el servicio OCSP: Desde 'Internal Key Bindings' -> 'OcspKeyBindings'  seleccione el elemento cread en el paso 3 y desde la columna 'Action' seleccione 'Update'. El sistema encuentra el certificado recién generado usando las llaves que ya tiene nuestro Crypto Token. Finalmente seleccione el botón "Enable" para dejar activo el servicio OCSP.
+5. Activar el servicio OCSP: Desde 'Internal Key Bindings' -> 'OcspKeyBindings'  seleccione el elemento creado en el paso 3 y desde la columna 'Action' seleccione 'Update'. El sistema encuentrará el certificado recién generado usando las llaves que ya tiene nuestro Crypto Token. Finalmente seleccione el botón "Enable" para dejar activo el servicio OCSP.
 
 Para probar el servicio puede usar OpenSSL y los certificados de la autoridad certificadora:
 
