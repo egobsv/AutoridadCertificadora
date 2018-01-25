@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-    hostname ejbca;
+    timedatectl set-timezone America/El_Salvador;
+    hostnamectl set-hostname certificadora; 
     echo "deb http://http.debian.net/debian jessie-backports main" >> /etc/apt/sources.list;
     apt-get update ;
     apt-get -y install -t jessie-backports  openjdk-8-jre-headless ca-certificates-java;
