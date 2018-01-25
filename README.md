@@ -29,7 +29,7 @@ EJBCA es la implementación de referencia de una PKI que ofrece un [amplio núme
 Estos perfiles define las características técnicas de los certificados. Ademas de los perfiles que instala por defecto EJBCA, el archivo perfiles-cert.zip contiene perfiles de certificados que pueden ser usados como referencia.  Para usarlos desde la página de Administración, seleccione 'CA Functions', 'Certificate Profiles','Seleccionar Archivo', 'Import from Zip file'. Una vez importados los certificados, use la opción 'Certificate Authorities' para crear una CA Raíz y dos subordinadas como se muestra en el siguiente diagrama.
 
  ```
-         CA Raíz
+          CA Raíz
      ------ | --------
      |               |
 
@@ -53,7 +53,7 @@ Esta instalación utiliza EJBCA como Autoridad Certificadora y Autoridad de Vali
 
 1. Certificado OCSP: Cada consulta OCSP recibe una respuesta firmada electrónicamente, por esto necesitamos contar con un certificado para firmar consultas OCSP (Extended key usage = OCSP Signer). Agregaremos una nueva entidad usando el perfil 'validacion-ocsp', vinculada a la CA 'SubCA Servicios'. Este entidad será usada para generar el certificado que firma respuestas OCSP, antes de generarlo desde la interfaz pública complete los siguientes pasos: 
 
-2: Almacén de llaves: Crearemos un almacén (Crypto Token) para guardar las llaves que usara el servicio OCSP. Desde el menú principal seleccione:
+2. Almacén de llaves: Crearemos un almacén (Crypto Token) para guardar las llaves que usará el servicio OCSP. Desde el menú principal seleccione:
 
 'CA Functions' -> 'Crypto Tokens' -> 'Create New' 
 
