@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-    hostname ejbca;
+    timedatectl set-timezone America/El_Salvador;
+    hostnamectl set-hostname sellado; 
     apt-get update ;
     apt-get -y install  openjdk-8-jre-headless ca-certificates-java;
     apt-get -y install openjdk-8-jdk unzip ntp ant ant-optional postgresql-9.5 postgresql-client-9.5;    
