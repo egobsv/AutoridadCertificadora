@@ -18,6 +18,12 @@ EJBCA es la implementación de referencia de una PKI que ofrece un [amplio núme
 
 - Edite la variable 'ca.dn' dentro de /opt/ejbca/conf/install.properties. Este es el nombre de la CA administrativa creada por defecto y no tiene ninguna relación con la Certificadora Raíz que crearemos más adelante.  
 
+- Edite el archivo /opt/ejbca/conf/web.properties, asegurese de tomar nota las credenciales del Usurio Super Admin:  superadmin.cn, superadmin.dn, superadmin.password.
+
+- Edite el archivo /opt/ejbca/conf/web.properties, asegurese de tomar nota del nombre de dominio y las credenciales de configuración de HTTPS:  httpsserver.password, httpsserver.dn, httpsserver.hostname, java.trustpassword.
+
+- Ingrese a la carpeta '/opt/scripts' y edite el archivo conf-jboss05.cli, asegúrese de usar los valores del paso anterior. 
+
 - Ingrese a la carpeta '/opt/scripts', abra el archivo comandos-jboss.txt. Ejecute estos comandos uno a uno, debe asegurarse de que JBoss procesa cada comando con éxito uno a uno. Al final asegúrese de copiar e instalar el certificado de superadmin en la maquina que desee. 
 
 - La interfaz publica estará disponible en http://[ip servidor]:8080/ejbca. 
