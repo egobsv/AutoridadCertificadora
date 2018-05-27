@@ -12,23 +12,23 @@ EJBCA es la implementación de referencia de una PKI que ofrece un [amplio núme
 
 ### Instrucciones
 
-- Descargue este repositorio y guárdelo en su servidor dentro de la carpeta /opt. Asegurese de descargar y agregar el servidor de JBoss en esta misma carpeta (jboss-eap-7.0.0.zip)
+1- Descargue este repositorio y guárdelo en su servidor dentro de la carpeta /opt. Asegurese de descargar y agregar el servidor de JBoss en esta misma carpeta (jboss-eap-7.0.0.zip)
  
-- Prepare su servidor ejecutando los comandos de su sistema operativo (debian-jessie.sh o ubuntu-xenial.sh).  
+2- Prepare su servidor ejecutando los comandos de su sistema operativo (debian-jessie.sh o ubuntu-xenial.sh).  
 
-- Edite la variable 'ca.dn' dentro de /opt/ejbca/conf/install.properties. Este es el nombre de la CA administrativa creada por defecto y no tiene ninguna relación con la Certificadora Raíz que crearemos más adelante.  
+3- Edite la variable 'ca.dn' dentro de /opt/ejbca/conf/install.properties. Este es el nombre de la CA administrativa creada por defecto y no tiene ninguna relación con la Certificadora Raíz que crearemos más adelante.  
 
-- Edite el archivo /opt/ejbca/conf/web.properties, asegurese de tomar nota las credenciales del Usurio Super Admin:  superadmin.cn, superadmin.dn, superadmin.password.
+4- Edite el archivo /opt/ejbca/conf/web.properties, asegúrese de tomar nota de las credenciales del Usurio Super Admin:  superadmin.cn, superadmin.dn, superadmin.password.
 
-- Edite el archivo /opt/ejbca/conf/web.properties, asegurese de tomar nota del nombre de dominio y las credenciales de configuración de HTTPS:  httpsserver.password, httpsserver.dn, httpsserver.hostname, java.trustpassword.
+5- Edite el archivo /opt/ejbca/conf/web.properties, asegúrese de tomar nota del nombre de dominio y las credenciales de configuración de HTTPS:  httpsserver.password, httpsserver.dn, httpsserver.hostname, java.trustpassword.
 
-- Ingrese a la carpeta '/opt/scripts' y edite el archivo conf-jboss05.cli, asegúrese de usar los valores del paso anterior. 
+6- Ingrese a la carpeta '/opt/scripts' y edite el archivo conf-jboss05.cli, asegúrese de usar los valores del paso anterior. 
 
-- Ingrese a la carpeta '/opt/scripts', abra el archivo comandos-jboss.txt. Ejecute estos comandos uno a uno, debe asegurarse de que JBoss procesa cada comando con éxito uno a uno. Al final asegúrese de copiar e instalar el certificado de superadmin en la maquina que desee. 
+7- Ingrese a la carpeta '/opt/scripts', abra el archivo comandos-jboss.txt. Ejecute estos comandos uno a uno, debe asegurarse de que JBoss procesa cada comando con éxito uno a uno. Al final asegúrese de copiar e instalar el certificado de superadmin en la maquina que desee. 
 
-- La interfaz publica estará disponible en http://[ip servidor]:8080/ejbca. 
+8- La interfaz publica estará disponible en http://[ip servidor]:8080/ejbca. 
 
-- Para las maquinas que tengan instalado el certificado de 'superadmin', la página de administración estará disponible en https://[ip servidor]:8443/ejbca/adminweb/. 
+9- Para las maquinas que tengan instalado el certificado de 'superadmin', la página de administración estará disponible en https://[ip servidor]:8443/ejbca/adminweb/. 
 
 ## Perfiles de Certificados
 
