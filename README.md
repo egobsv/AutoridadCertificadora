@@ -7,7 +7,7 @@ EJBCA es la implementación de referencia de una PKI que ofrece un [amplio núme
 
 * OpenJDK 8
 * [JBoss EAP 7.0](https://developers.redhat.com/download-manager/file/jboss-eap-7.0.0.zip) 
-* [EJBCA CE 6.5](https://sourceforge.net/projects/ejbca/files/ejbca6/ejbca_6_5_0/ejbca_ce_6_5.0.5.zip)
+* [EJBCA CE 6.10](https://sourceforge.net/projects/ejbca/files/ejbca6/ejbca_6_10_0/ejbca_ce_6_10_1_2.zip)
 
 
 ### Instrucciones
