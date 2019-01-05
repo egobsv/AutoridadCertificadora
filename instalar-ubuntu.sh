@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
     timedatectl set-timezone America/El_Salvador;
-    hostnamectl set-hostname sellado; 
+    hostnamectl set-hostname ejbca; 
     apt-get update ;
     apt-get -y install  openjdk-8-jre-headless ca-certificates-java;
-    apt-get -y install openjdk-8-jdk unzip ntp ant ant-optional postgresql-9.5 postgresql-client-9.5;    
+    apt-get -y install openjdk-8-jdk unzip ntp ant ant-optional postgresql postgresql-client;    
     mkdir -p  /etc/jboss; cd /opt/;
-    unzip -q /opt/ejbca_ce_6_5.0.5.zip;
+    unzip -q /opt/ejbca_ce_6_10_1_2.zip;
     unzip -q /opt/jboss-eap-7.0.0.zip;
-    mv /opt/ejbca_ce_6_5.0.5 /opt/ejbca;
+    mv /opt/ejbca_ce_6_10_1_2 /opt/ejbca;
     mv /opt/jboss-eap-7.0 /opt/jboss;
     mv /opt/configurar-jboss /opt/scripts; 
     cp /opt/scripts/ejbca/* /opt/ejbca/conf/;
