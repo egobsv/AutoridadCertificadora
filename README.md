@@ -1,6 +1,6 @@
 
 ## Instalación de una PKI
-Estas son las instrucciones para instalar una PKI, Autoridad Certificadora y sus servicios asociados, usando el software libre EJBCA. Las instrucciones pueden seguirse usando Ubuntu Server 16 LTS o Debian 8. 
+Estas son las instrucciones para instalar una PKI, Autoridad Certificadora y sus servicios asociados, usando el software libre EJBCA. Las instrucciones pueden seguirse usando Ubuntu Server 16 LTS o Debian 9. 
 EJBCA es la implementación de referencia de una PKI que ofrece un [amplio número de servicios](https://www.ejbca.org/features.html) asociados a la firma electrónica. 
 
 ### Requisitos de Instalación
